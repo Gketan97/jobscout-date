@@ -1,0 +1,11 @@
+{
+  "name": "jobscout-crawler",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "crawl": "node crawler.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
