@@ -1,0 +1,22 @@
+{
+  "v": 6,
+  "count": 2094,
+  "updated_at": "2026-03-23T14:10:56.152Z",
+  "sources": {
+    "greenhouse": 493,
+    "lever": 15,
+    "eightfold": 8,
+    "adzuna": 1578
+  },
+  "cities": {
+    "Bengaluru": 930,
+    "India": 41,
+    "Delhi NCR": 293,
+    "Pune": 143,
+    "Mumbai": 464,
+    "Chennai": 4,
+    "Remote": 26,
+    "Hyderabad": 193
+  },
+  "elapsed_s": 121.9
+}
