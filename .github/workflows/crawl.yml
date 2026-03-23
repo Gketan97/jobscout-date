@@ -1,34 +1,89 @@
-name: Crawl Jobs
+name: JobScout Crawler
 
 on:
+  # Daily full run — 12:30 AM IST = 7:00 PM UTC (previous day)
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '0 19 * * *'
+
+  # Incremental run triggered by push to companies.json — scrapes only new companies
+  push:
+    paths:
+      - 'config/companies.json'
+
+  # Manual trigger — choose full or new-only
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Run mode'
+        required: true
+        default: 'incremental'
+        type: choice
+        options:
+          - incremental
+          - force
+          - new-only
 
 jobs:
   crawl:
+    name: Crawl jobs
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+    timeout-minutes: 30
 
-      - uses: actions/setup-node@v4
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          # Need full history so we can detect what changed in companies.json
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install node-fetch@3
+        run: npm ci
 
-      - name: Run crawler
-        env:
-          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
-          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
-          JSEARCH_KEY: ${{ secrets.JSEARCH_KEY }}
-        run: node crawler.js
-
-      - name: Commit jobs.json
+      - name: Determine run mode
+        id: mode
         run: |
-          git config user.name "JobScout Bot"
-          git config user.email "bot@jobscout.in"
-          git add data/jobs.json data/meta.json
-          git diff --staged --quiet || git commit -m "Update jobs $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          # Manual dispatch — use selected mode
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "args=${{ inputs.mode == 'force' && '--force' || inputs.mode == 'new-only' && '--new-only' || '' }}" >> $GITHUB_OUTPUT
+            echo "label=${{ inputs.mode }}" >> $GITHUB_OUTPUT
+
+          # Push to companies.json — only scrape new companies
+          elif [ "${{ github.event_name }}" = "push" ]; then
+            echo "args=--new-only" >> $GITHUB_OUTPUT
+            echo "label=new-only (companies.json updated)" >> $GITHUB_OUTPUT
+
+          # Scheduled — standard incremental (respects 23h TTL per company)
+          else
+            echo "args=" >> $GITHUB_OUTPUT
+            echo "label=incremental (scheduled)" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run crawler (${{ steps.mode.outputs.label }})
+        run: node crawler.js ${{ steps.mode.outputs.args }}
+        env:
+          ADZUNA_APP_ID:  ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          JSEARCH_KEY:    ${{ secrets.JSEARCH_KEY }}
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "JobScout Bot"
+          git config user.email "bot@jobscout-india"
+
+          # Always commit data files
+          git add data/jobs.json data/meta.json data/state.json
+
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            JOBS=$(node -e "const d=require('./data/meta.json');console.log(d.count)")
+            git commit -m "chore: crawl ${{ steps.mode.outputs.label }} — ${JOBS} jobs [skip ci]"
+            git push
+          fi
