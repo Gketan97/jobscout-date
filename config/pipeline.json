@@ -1,0 +1,205 @@
+{
+  "_comment": "JobScout onboarding pipeline — companies identified but not yet active. Move to companies.json once onboarded.",
+  "_status_guide": {
+    "needs_research": "Company identified, need to find their ATS/careers page",
+    "needs_slug": "ATS known, need to find exact tenant ID / board slug",
+    "ready_to_add": "All details confirmed, just needs adding to companies.json",
+    "blocked": "Cannot scrape — custom ATS, no public API, or bot protection"
+  },
+  "pipeline": [
+    {
+      "n": "Flipkart",
+      "ind": "ecommerce", "c": "#F74F00", "t": 1,
+      "status": "needs_research",
+      "notes": "Custom careers page at flipkartcareers.com. May use Workday or iCIMS underneath — confirm via network tab inspection."
+    },
+    {
+      "n": "Ola",
+      "ind": "mobility", "c": "#FDD820", "t": 1,
+      "status": "needs_research",
+      "notes": "Ola corporate careers separate from Ola Electric. Check if they use Greenhouse or Lever — Ola Electric may be separate entity."
+    },
+    {
+      "n": "HDFC Bank",
+      "ind": "bfsi", "c": "#004C8F", "t": 3,
+      "status": "needs_research",
+      "notes": "Indian bank — likely custom careers portal. Check for Taleo or iCIMS under the hood."
+    },
+    {
+      "n": "ICICI Bank",
+      "ind": "bfsi", "c": "#F58220", "t": 3,
+      "status": "needs_research",
+      "notes": "Similar to HDFC — needs careers page inspection."
+    },
+    {
+      "n": "Axis Bank",
+      "ind": "bfsi", "c": "#800000", "t": 3,
+      "status": "needs_research",
+      "notes": "Large India bank with GCC expansion. Likely on Taleo."
+    },
+    {
+      "n": "KPMG India",
+      "ind": "consulting", "c": "#00338D", "t": 3,
+      "status": "needs_slug",
+      "method": "workday",
+      "notes": "Workday confirmed via network inspection. Exact board slug TBD — try KPMG_India or KPMG_Careers."
+    },
+    {
+      "n": "EY India",
+      "ind": "consulting", "c": "#FFE600", "t": 3,
+      "status": "needs_slug",
+      "method": "workday",
+      "notes": "Workday confirmed. Board slug uncertain — try EY_India, EY_Experienced, EY_GDS."
+    },
+    {
+      "n": "PwC India",
+      "ind": "consulting", "c": "#D04A02", "t": 3,
+      "status": "needs_slug",
+      "method": "workday",
+      "notes": "Workday confirmed. Location filter India may not work — verify."
+    },
+    {
+      "n": "Infosys BPM",
+      "ind": "services", "c": "#007CC3", "t": 3,
+      "status": "needs_research",
+      "notes": "Separate entity from Infosys IT. Check if same Greenhouse board or separate."
+    },
+    {
+      "n": "Wipro BPS",
+      "ind": "services", "c": "#341C6D", "t": 3,
+      "status": "needs_research",
+      "notes": "Separate BPS division. May use different ATS from main Wipro."
+    },
+    {
+      "n": "Razorpay X / Neobank",
+      "ind": "fintech", "c": "#2666CF", "t": 1,
+      "status": "needs_research",
+      "notes": "Jobs may be under main Razorpay board already — verify dedup."
+    },
+    {
+      "n": "Jio",
+      "ind": "telecom", "c": "#0A3F7F", "t": 1,
+      "status": "blocked",
+      "notes": "Jio careers at careers.jio.com — completely custom, no known public ATS API. May need Adzuna fallback."
+    },
+    {
+      "n": "Reliance Industries",
+      "ind": "conglomerate", "c": "#0A3F7F", "t": 1,
+      "status": "blocked",
+      "notes": "Custom SAP SuccessFactors-based portal. Very locked down."
+    },
+    {
+      "n": "Myntra",
+      "ind": "ecommerce", "c": "#FF3E6C", "t": 2,
+      "status": "needs_research",
+      "notes": "Flipkart subsidiary. May share same ATS or have separate board."
+    },
+    {
+      "n": "Phonepe (Pincode)",
+      "ind": "ecommerce", "c": "#5F4BB6", "t": 1,
+      "status": "needs_research",
+      "notes": "PhonePe's separate ecommerce venture. Separate Greenhouse board likely."
+    },
+    {
+      "n": "Slice",
+      "ind": "fintech", "c": "#6366f1", "t": 2,
+      "status": "needs_research",
+      "notes": "Neobank startup, growing team. Check Greenhouse or Lever."
+    },
+    {
+      "n": "Open Financial",
+      "ind": "fintech", "c": "#5C5FFF", "t": 2,
+      "status": "needs_research",
+      "notes": "SME neobank. Check Ashby or Greenhouse."
+    },
+    {
+      "n": "Licious",
+      "ind": "d2c", "c": "#E53935", "t": 2,
+      "status": "needs_research",
+      "notes": "D2C meat delivery. Growing tech team."
+    },
+    {
+      "n": "Country Delight",
+      "ind": "d2c", "c": "#4CAF50", "t": 2,
+      "status": "needs_research",
+      "notes": "D2C dairy. Check Greenhouse."
+    },
+    {
+      "n": "Noise",
+      "ind": "d2c", "c": "#FF5C5C", "t": 2,
+      "status": "needs_research",
+      "notes": "Consumer electronics brand. Growing GCC."
+    },
+    {
+      "n": "boAt",
+      "ind": "d2c", "c": "#1A1A2E", "t": 2,
+      "status": "needs_research",
+      "notes": "Consumer electronics. Hiring aggressively."
+    },
+    {
+      "n": "Jupiter (Neo)",
+      "ind": "fintech", "c": "#6366f1", "t": 2,
+      "status": "needs_research",
+      "notes": "Already in Ashby as Jupiter — verify completeness."
+    },
+    {
+      "n": "Cred Mint",
+      "ind": "fintech", "c": "#6366f1", "t": 1,
+      "status": "needs_research",
+      "notes": "CRED's lending arm — separate hiring or same Lever board?"
+    },
+    {
+      "n": "Nuvama (Edelweiss)",
+      "ind": "bfsi", "c": "#003087", "t": 3,
+      "status": "needs_research",
+      "notes": "Wealth management. Check Workday or iCIMS."
+    },
+    {
+      "n": "Tata Digital",
+      "ind": "ecommerce", "c": "#0F3B8C", "t": 1,
+      "status": "needs_research",
+      "notes": "Tata Neu parent. Custom SAP careers — very likely blocked."
+    },
+    {
+      "n": "Capillary Technologies",
+      "ind": "saas", "c": "#FF6B00", "t": 2,
+      "status": "needs_research",
+      "notes": "Enterprise loyalty SaaS. Check Greenhouse or Lever."
+    },
+    {
+      "n": "Zenoti",
+      "ind": "saas", "c": "#0077C0", "t": 2,
+      "status": "needs_research",
+      "notes": "Spa/salon SaaS unicorn. Check Greenhouse."
+    },
+    {
+      "n": "Icertis",
+      "ind": "saas", "c": "#0071C5", "t": 2,
+      "status": "needs_research",
+      "notes": "Contract management SaaS unicorn. Check Greenhouse or Workday."
+    },
+    {
+      "n": "Druva",
+      "ind": "cloud", "c": "#FF6B35", "t": 2,
+      "status": "needs_research",
+      "notes": "Cloud data protection. Greenhouse likely."
+    },
+    {
+      "n": "iNaturalist / Gupshup",
+      "ind": "saas", "c": "#00BCD4", "t": 2,
+      "status": "needs_research",
+      "notes": "Messaging API company. Large India team."
+    }
+  ],
+  "_scale_targets": {
+    "current_estimate": "3000-5000 jobs",
+    "target": "10000+",
+    "gaps": [
+      "Workday integration (Target, Walmart, SAP, TI etc.) — estimated +2000 jobs",
+      "JSearch/Indeed integration — estimated +3000 jobs",
+      "BFSI sector (HDFC, ICICI, Axis) — estimated +500 jobs",
+      "iCIMS integration for pharma/FMCG — estimated +500 jobs",
+      "Eightfold pagination fix (AmEx can have 500+ India jobs alone)"
+    ]
+  }
+}
