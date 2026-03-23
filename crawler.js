@@ -67,6 +67,26 @@ const GREENHOUSE = [
   { n:'Zerodha',      t:2, ind:'fintech',    c:'#387ED1', s:'zerodha'                        },
   { n:'BharatPe',     t:2, ind:'fintech',    c:'#22C55E', s:'bharatpe'                       },
   { n:'Perfios',      t:2, ind:'fintech',    c:'#00897B', s:'perfios'                        },
+  { n:'Moneyview',    t:2, ind:'fintech',    c:'#2196F3', s:'moneyview'                      },
+  { n:'KreditBee',    t:2, ind:'fintech',    c:'#FF6B2C', s:'kreditbee'                      },
+  { n:'Lenskart',     t:2, ind:'ecommerce',  c:'#00BFFF', s:'lenskart'                       },
+  { n:'BlackBuck',    t:2, ind:'logistics',  c:'#1A1A2E', s:'blackbuck'                      },
+  { n:'Dunzo',        t:2, ind:'ecommerce',  c:'#FF6B35', s:'dunzo'                          },
+  { n:'HealthifyMe',  t:2, ind:'healthtech', c:'#10B981', s:'healthifyme'                    },
+  { n:'Cure.fit',     t:2, ind:'healthtech', c:'#FF4081', s:'curefit'                        },
+  { n:'Urban Company',t:2, ind:'services',   c:'#5046E5', s:'urbancompany'                   },
+  { n:'Acko',         t:1, ind:'insurance',  c:'#F85C50', s:'acko'                           },
+  { n:'Digit',        t:1, ind:'insurance',  c:'#FF5A1F', s:'digit'                          },
+  { n:'Innoviti',     t:2, ind:'fintech',    c:'#003087', s:'innoviti'                       },
+  { n:'Mintifi',      t:2, ind:'fintech',    c:'#00BCD4', s:'mintifi'                        },
+  { n:'Ninjacart',    t:2, ind:'agritech',   c:'#FF6B00', s:'ninjacart'                      },
+  { n:'DeHaat',       t:2, ind:'agritech',   c:'#388E3C', s:'dehaat'                         },
+  { n:'Zetwerk',      t:1, ind:'b2b',        c:'#FF6B00', s:'zetwerk'                        },
+  { n:'Vedantu',      t:2, ind:'edtech',     c:'#562FBC', s:'vedantu'                        },
+  { n:'upGrad',       t:2, ind:'edtech',     c:'#FF5252', s:'upgrad'                         },
+  { n:'Testbook',     t:2, ind:'edtech',     c:'#00A651', s:'testbook'                       },
+  { n:'Eruditus',     t:2, ind:'edtech',     c:'#1A1A2E', s:'eruditus'                       },
+  { n:'Simplilearn',  t:2, ind:'edtech',     c:'#FF6B00', s:'simplilearn'                    },
   // T3 — MNC India (Greenhouse)
   { n:'Visa',         t:3, ind:'bfsi',       c:'#1A1F71', s:'visa'                           },
   { n:'Mastercard',   t:3, ind:'bfsi',       c:'#EB001B', s:'mastercard'                     },
@@ -159,6 +179,18 @@ const LEVER = [
   { n:'Procore',      t:4, ind:'saas',       c:'#FF5722', s:'procore'      },
   { n:'Deliveroo',    t:4, ind:'food',       c:'#00CCBC', s:'deliveroo'    },
   { n:'Mattermost',   t:4, ind:'saas',       c:'#0072C6', s:'mattermost'   },
+  { n:'Pristyn Care', t:2, ind:'healthtech', c:'#06B6D4', s:'pristyncare'  },
+  { n:'Rapido',       t:2, ind:'mobility',   c:'#FBBF24', s:'rapido'       },
+  { n:'Springworks',  t:2, ind:'hrtech',     c:'#7B1FA2', s:'springworks'  },
+  { n:'Khatabook',    t:2, ind:'fintech',    c:'#3B82F6', s:'khatabook'    },
+  { n:'Apna',         t:2, ind:'hrtech',     c:'#3B5BDB', s:'apna'         },
+  { n:'Udaan',        t:1, ind:'b2b',        c:'#FF6633', s:'udaan'        },
+  { n:'Ninjacart',    t:2, ind:'agritech',   c:'#FF6B00', s:'ninjacart'    },
+  { n:'Rebel Foods',  t:2, ind:'food',       c:'#E63946', s:'rebelfoods'   },
+  { n:'Lenskart',     t:2, ind:'ecommerce',  c:'#00BFFF', s:'lenskart'     },
+  { n:'BlackBuck',    t:2, ind:'logistics',  c:'#1A1A2E', s:'blackbuck'    },
+  { n:'Substack',     t:4, ind:'media',      c:'#FF6719', s:'substack'     },
+  { n:'Quizlet',      t:4, ind:'edtech',     c:'#4257B2', s:'quizlet'      },
 ];
 
 const ASHBY = [
@@ -180,6 +212,12 @@ const ASHBY = [
   { n:'Neon',         t:4, ind:'cloud',      c:'#00E599', s:'neon'         },
   { n:'Raycast',      t:4, ind:'saas',       c:'#FF6363', s:'raycast'      },
   { n:'Resend',       t:4, ind:'saas',       c:'#000000', s:'resend'       },
+  { n:'Jar',          t:2, ind:'fintech',    c:'#F59E0B', s:'jar'          },
+  { n:'Navi',         t:2, ind:'fintech',    c:'#6C3EEB', s:'navi'         },
+  { n:'Khatabook',    t:2, ind:'fintech',    c:'#3B82F6', s:'khatabook'    },
+  { n:'Campsite',     t:4, ind:'saas',       c:'#FF5C5C', s:'campsite'     },
+  { n:'Runway',       t:4, ind:'ai',         c:'#000000', s:'runwayml'     },
+  { n:'Anyscale',     t:4, ind:'ai',         c:'#00BFFF', s:'anyscale'     },
 ];
 
 // Workable — paginated, 50/page
@@ -513,7 +551,7 @@ async function fetchWorkable(co) {
   let offset = 0;
   while (true) {
     const d = await fetchJSON(
-      `https://apply.workable.com/api/v3/accounts/${co.s}/jobs?limit=50&offset=${offset}&state=published`
+      `https://apply.workable.com/api/v3/accounts/${co.s}/jobs?limit=50&offset=${offset}`
     );
     if (!d?.results?.length) break;
     for (const j of d.results) {
@@ -546,7 +584,7 @@ async function fetchSmartRecruiters(co) {
   let offset = 0;
   while (true) {
     const d = await fetchJSON(
-      `https://api.smartrecruiters.com/v1/companies/${co.s}/postings?country=IN&limit=100&offset=${offset}`
+      `https://api.smartrecruiters.com/v1/companies/${co.s}/postings?country=IN&limit=100&offset=${offset}&status=PUBLISHED`
     );
     if (!d?.content?.length) break;
     for (const j of d.content) {
