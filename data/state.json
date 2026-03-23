@@ -1,0 +1,19 @@
+{
+  "_comment": "JobScout scrape state — written by crawler after each run. DO NOT edit manually.",
+  "_schema": {
+    "last_full_run": "ISO timestamp of last full crawl",
+    "last_run_count": "total jobs in last run",
+    "companies": {
+      "[method:slug]": {
+        "last_scraped": "ISO timestamp",
+        "last_count": "number of jobs fetched",
+        "status": "ok | error | empty",
+        "error": "last error message if any",
+        "consecutive_errors": "number of consecutive failed runs"
+      }
+    }
+  },
+  "last_full_run": null,
+  "last_run_count": 0,
+  "companies": {}
+}
