@@ -685,6 +685,66 @@ function dedup(jobs) {
   }
   return out;
 }
+// ── GOOGLE SHEET FETCHER ──────────────────────────────────────────────────────
+const GSHEET_CSV_URL = process.env.GSHEET_CSV_URL || '';
+
+function parseCSV(text) {
+  const lines = text.trim().split('\n');
+  if (lines.length < 2) return [];
+  const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+  return lines.slice(1).map(line => {
+    const values = [];
+    let current = '', inQuotes = false;
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (ch === '"') { inQuotes = !inQuotes; }
+      else if (ch === ',' && !inQuotes) { values.push(current.trim()); current = ''; }
+      else { current += ch; }
+    }
+    values.push(current.trim());
+    const row = {};
+    headers.forEach((h, i) => { row[h] = (values[i] || '').replace(/^"|"$/g, '').trim(); });
+    return row;
+  }).filter(row => row.id && row.title && row.company);
+}
+
+async function fetchGoogleSheet() {
+  if (!GSHEET_CSV_URL) { console.log('  ⚠️  GSHEET_CSV_URL not set — skipping'); return []; }
+  console.log('  ↳ Fetching Google Sheet...');
+  try {
+    const r = await fetch(GSHEET_CSV_URL, {
+      headers: { 'User-Agent': 'JobScout/8.0' },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const csvText = await r.text();
+    const rows = parseCSV(csvText);
+    console.log(`  ↳ ${rows.length} rows in sheet`);
+    const jobs = [];
+    for (const row of rows) {
+      if (!isTargetRole(row.title)) continue;
+      const fn = row.fn || detectFn(row.title);
+      if (!TARGET_FNS.has(fn)) continue;
+      const posted = row.posted_at && /^\d{4}-\d{2}-\d{2}$/.test(row.posted_at)
+        ? row.posted_at : new Date().toISOString().slice(0, 10);
+      jobs.push(makeJob({
+        id: row.id || `manual-${hashStr(row.company + row.title)}`,
+        title: row.title, company: row.company,
+        location: row.location || 'India',
+        city: row.city || detectCity(row.location || ''),
+        mode: row.mode || detectMode(row.location || ''),
+        fn, seniority: row.seniority || detectSeniority(row.title),
+        url: row.url || '', color: row.color || '#6366f1',
+        posted_at: posted, src: 'manual', tier: 2,
+      }));
+    }
+    console.log(`  ✓  Google Sheet: ${jobs.length} valid jobs`);
+    return jobs;
+  } catch (e) {
+    console.log(`  ✗  Google Sheet error: ${e.message}`);
+    return [];
+  }
+}
 
 // ── MAIN ──────────────────────────────────────────────────────────────────────
 async function main() {
@@ -762,6 +822,10 @@ async function main() {
   } else {
     console.log('\n⚠️  Skipping Adzuna — ADZUNA_APP_ID not set');
   }
+  // Google Sheet manual jobs
+  console.log('\n── GOOGLE SHEET ──');
+  const sheetJobs = await fetchGoogleSheet();
+  freshJobs.push(...sheetJobs);
 
   // Merge: fresh jobs + preserved jobs from skipped companies
   let allJobs;
