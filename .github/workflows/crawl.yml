@@ -55,9 +55,11 @@ jobs:
       - name: Run crawler (${{ steps.mode.outputs.label }})
         run: node crawler.js ${{ steps.mode.outputs.args }}
         env:
+          env:
           ADZUNA_APP_ID:  ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           JSEARCH_KEY:    ${{ secrets.JSEARCH_KEY }}
+          GSHEET_CSV_URL: ${{ secrets.GSHEET_CSV_URL }}
       - name: Commit updated data
         run: |
           git config user.name  "JobScout Bot"
