@@ -721,8 +721,8 @@ async function fetchGoogleSheet() {
     const rows = parseCSV(csvText);
     console.log(`  ↳ ${rows.length} rows in sheet`);
     const jobs = [];
+    const TARGET_FNS = new Set(['data','product','bizops','engineering','finance','design']);
     for (const row of rows) {
-      if (!isTargetRole(row.title)) continue;
       const fn = row.fn || detectFn(row.title);
       if (!TARGET_FNS.has(fn)) continue;
       const posted = row.posted_at && /^\d{4}-\d{2}-\d{2}$/.test(row.posted_at)
