@@ -1,7 +1,7 @@
 {
   "v": 7,
   "count": 749,
-  "updated_at": "2026-05-21T11:47:44.791Z",
+  "updated_at": "2026-05-21T12:07:58.637Z",
   "sources": {
     "manual": 157,
     "greenhouse": 448,
@@ -33,6 +33,6 @@
     "Remote": 26,
     "Ahmedabad": 1
   },
-  "elapsed_s": 0.4,
+  "elapsed_s": 1.2,
   "mode": "INCREMENTAL"
 }
