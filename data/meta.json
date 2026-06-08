@@ -1,22 +1,22 @@
 {
   "v": 7,
-  "count": 2356,
-  "updated_at": "2026-06-07T20:19:10.441Z",
+  "count": 2302,
+  "updated_at": "2026-06-08T21:15:53.325Z",
   "sources": {
-    "greenhouse": 481,
-    "adzuna": 1668,
-    "lever": 52,
+    "greenhouse": 476,
+    "adzuna": 1622,
+    "lever": 49,
     "manual": 155
   },
   "cities": {
-    "Bengaluru": 989,
-    "India": 66,
-    "Mumbai": 538,
-    "Delhi NCR": 305,
+    "Bengaluru": 964,
+    "India": 69,
+    "Mumbai": 521,
+    "Delhi NCR": 293,
     "Kolkata": 3,
-    "Pune": 106,
+    "Pune": 109,
     "Chennai": 12,
-    "Hyderabad": 268,
+    "Hyderabad": 262,
     "Remote": 22,
     "Ahmedabad": 1,
     "Pune City": 1,
@@ -33,6 +33,6 @@
     "Airoli": 1,
     "Jaipur": 1
   },
-  "elapsed_s": 208.8,
+  "elapsed_s": 249.7,
   "mode": "INCREMENTAL"
 }
