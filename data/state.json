@@ -13,1615 +13,1615 @@
       }
     }
   },
-  "last_full_run": "2026-06-30T21:02:40.745Z",
-  "last_run_count": 1350,
+  "last_full_run": "2026-07-01T20:52:19.891Z",
+  "last_run_count": 1751,
   "companies": {
     "greenhouse:razorpaysoftwareprivatelimited": {
-      "last_scraped": "2026-06-30T20:57:53.388Z",
-      "last_count": 28,
+      "last_scraped": "2026-07-01T20:48:28.223Z",
+      "last_count": 31,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:phonepe": {
-      "last_scraped": "2026-06-30T20:57:53.586Z",
+      "last_scraped": "2026-07-01T20:48:28.438Z",
       "last_count": 60,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:groww": {
-      "last_scraped": "2026-06-30T20:57:53.783Z",
-      "last_count": 17,
+      "last_scraped": "2026-07-01T20:48:28.651Z",
+      "last_count": 16,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:inmobi": {
-      "last_scraped": "2026-06-30T20:57:53.991Z",
-      "last_count": 56,
+      "last_scraped": "2026-07-01T20:48:28.866Z",
+      "last_count": 58,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:zepto": {
-      "last_scraped": "2026-06-30T20:57:54.033Z",
+      "last_scraped": "2026-07-01T20:48:28.927Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:nykaa": {
-      "last_scraped": "2026-06-30T20:57:54.077Z",
+      "last_scraped": "2026-07-01T20:48:28.986Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:swiggy": {
-      "last_scraped": "2026-06-30T20:57:54.123Z",
+      "last_scraped": "2026-07-01T20:48:29.045Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:zomato": {
-      "last_scraped": "2026-06-30T20:57:54.164Z",
+      "last_scraped": "2026-07-01T20:48:29.103Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:dream11": {
-      "last_scraped": "2026-06-30T20:57:54.204Z",
+      "last_scraped": "2026-07-01T20:48:29.164Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:delhivery": {
-      "last_scraped": "2026-06-30T20:57:54.245Z",
+      "last_scraped": "2026-07-01T20:48:29.220Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:policybazaar": {
-      "last_scraped": "2026-06-30T20:57:54.286Z",
+      "last_scraped": "2026-07-01T20:48:29.278Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:pharmeasy": {
-      "last_scraped": "2026-06-30T20:57:54.328Z",
+      "last_scraped": "2026-07-01T20:48:29.334Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:moglix": {
-      "last_scraped": "2026-06-30T20:57:54.369Z",
+      "last_scraped": "2026-07-01T20:48:29.466Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:acko": {
-      "last_scraped": "2026-06-30T20:57:54.409Z",
+      "last_scraped": "2026-07-01T20:48:29.523Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:digit": {
-      "last_scraped": "2026-06-30T20:57:54.610Z",
+      "last_scraped": "2026-07-01T20:48:29.736Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:zetwerk": {
-      "last_scraped": "2026-06-30T20:57:54.652Z",
+      "last_scraped": "2026-07-01T20:48:29.795Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:porter": {
-      "last_scraped": "2026-06-30T20:57:54.694Z",
+      "last_scraped": "2026-07-01T20:48:29.855Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:juspay": {
-      "last_scraped": "2026-06-30T20:57:54.738Z",
+      "last_scraped": "2026-07-01T20:48:29.910Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:cashfree": {
-      "last_scraped": "2026-06-30T20:57:54.785Z",
+      "last_scraped": "2026-07-01T20:48:29.963Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:smallcase": {
-      "last_scraped": "2026-06-30T20:57:54.825Z",
+      "last_scraped": "2026-07-01T20:48:30.020Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:kreditbee": {
-      "last_scraped": "2026-06-30T20:57:54.916Z",
+      "last_scraped": "2026-07-01T20:48:30.150Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:cars24": {
-      "last_scraped": "2026-06-30T20:57:54.956Z",
+      "last_scraped": "2026-07-01T20:48:30.207Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:spinny": {
-      "last_scraped": "2026-06-30T20:57:55.000Z",
+      "last_scraped": "2026-07-01T20:48:30.264Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:shiprocket": {
-      "last_scraped": "2026-06-30T20:57:55.044Z",
+      "last_scraped": "2026-07-01T20:48:30.323Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:innovaccer": {
-      "last_scraped": "2026-06-30T20:57:55.088Z",
+      "last_scraped": "2026-07-01T20:48:30.450Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:moengage": {
-      "last_scraped": "2026-06-30T20:57:55.129Z",
+      "last_scraped": "2026-07-01T20:48:30.579Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:lambdatest": {
-      "last_scraped": "2026-06-30T20:57:55.211Z",
+      "last_scraped": "2026-07-01T20:48:30.710Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:sprinklr": {
-      "last_scraped": "2026-06-30T20:57:55.259Z",
+      "last_scraped": "2026-07-01T20:48:30.765Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:darwinbox": {
-      "last_scraped": "2026-06-30T20:57:55.299Z",
+      "last_scraped": "2026-07-01T20:48:30.896Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:leadsquared": {
-      "last_scraped": "2026-06-30T20:57:55.342Z",
+      "last_scraped": "2026-07-01T20:48:31.023Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:whatfix": {
-      "last_scraped": "2026-06-30T20:57:55.423Z",
+      "last_scraped": "2026-07-01T20:48:31.085Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:zerodha": {
-      "last_scraped": "2026-06-30T20:57:55.466Z",
+      "last_scraped": "2026-07-01T20:48:31.223Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:bharatpe": {
-      "last_scraped": "2026-06-30T20:57:55.508Z",
+      "last_scraped": "2026-07-01T20:48:31.284Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:perfios": {
-      "last_scraped": "2026-06-30T20:57:55.591Z",
+      "last_scraped": "2026-07-01T20:48:31.414Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:moneyview": {
-      "last_scraped": "2026-06-30T20:57:55.633Z",
+      "last_scraped": "2026-07-01T20:48:31.547Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:lenskart": {
-      "last_scraped": "2026-06-30T20:57:55.670Z",
+      "last_scraped": "2026-07-01T20:48:31.682Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:blackbuck": {
-      "last_scraped": "2026-06-30T20:57:55.760Z",
+      "last_scraped": "2026-07-01T20:48:31.737Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:healthifyme": {
-      "last_scraped": "2026-06-30T20:57:55.799Z",
+      "last_scraped": "2026-07-01T20:48:31.865Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:curefit": {
-      "last_scraped": "2026-06-30T20:57:55.882Z",
+      "last_scraped": "2026-07-01T20:48:31.997Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:urbancompany": {
-      "last_scraped": "2026-06-30T20:57:55.923Z",
+      "last_scraped": "2026-07-01T20:48:32.124Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:innoviti": {
-      "last_scraped": "2026-06-30T20:57:55.961Z",
+      "last_scraped": "2026-07-01T20:48:32.177Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:mintifi": {
-      "last_scraped": "2026-06-30T20:57:56.001Z",
+      "last_scraped": "2026-07-01T20:48:32.228Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:ninjacart": {
-      "last_scraped": "2026-06-30T20:57:56.042Z",
+      "last_scraped": "2026-07-01T20:48:32.289Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:dehaat": {
-      "last_scraped": "2026-06-30T20:57:56.084Z",
+      "last_scraped": "2026-07-01T20:48:32.344Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:vedantu": {
-      "last_scraped": "2026-06-30T20:57:56.124Z",
+      "last_scraped": "2026-07-01T20:48:32.397Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:upgrad": {
-      "last_scraped": "2026-06-30T20:57:56.163Z",
+      "last_scraped": "2026-07-01T20:48:32.455Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:testbook": {
-      "last_scraped": "2026-06-30T20:57:56.204Z",
+      "last_scraped": "2026-07-01T20:48:32.507Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:eruditus": {
-      "last_scraped": "2026-06-30T20:57:56.246Z",
+      "last_scraped": "2026-07-01T20:48:32.564Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:simplilearn": {
-      "last_scraped": "2026-06-30T20:57:56.285Z",
+      "last_scraped": "2026-07-01T20:48:32.617Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:visa": {
-      "last_scraped": "2026-06-30T20:57:56.328Z",
+      "last_scraped": "2026-07-01T20:48:32.677Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:mastercard": {
-      "last_scraped": "2026-06-30T20:57:56.367Z",
+      "last_scraped": "2026-07-01T20:48:32.733Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:paypal": {
-      "last_scraped": "2026-06-30T20:57:56.407Z",
+      "last_scraped": "2026-07-01T20:48:32.790Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:uber": {
-      "last_scraped": "2026-06-30T20:57:58.342Z",
+      "last_scraped": "2026-07-01T20:48:32.845Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:adobe": {
-      "last_scraped": "2026-06-30T20:57:58.385Z",
+      "last_scraped": "2026-07-01T20:48:32.898Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:salesforce": {
-      "last_scraped": "2026-06-30T20:57:58.426Z",
+      "last_scraped": "2026-07-01T20:48:32.954Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:cisco": {
-      "last_scraped": "2026-06-30T20:57:58.466Z",
+      "last_scraped": "2026-07-01T20:48:33.010Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:ibm": {
-      "last_scraped": "2026-06-30T20:57:58.504Z",
+      "last_scraped": "2026-07-01T20:48:33.065Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:expedia": {
-      "last_scraped": "2026-06-30T20:57:58.543Z",
+      "last_scraped": "2026-07-01T20:48:33.122Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:bookingcom": {
-      "last_scraped": "2026-06-30T20:57:58.586Z",
+      "last_scraped": "2026-07-01T20:48:33.178Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:ge": {
-      "last_scraped": "2026-06-30T20:57:58.626Z",
+      "last_scraped": "2026-07-01T20:48:33.242Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:honeywell": {
-      "last_scraped": "2026-06-30T20:57:58.666Z",
+      "last_scraped": "2026-07-01T20:48:33.294Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:siemens": {
-      "last_scraped": "2026-06-30T20:57:58.757Z",
+      "last_scraped": "2026-07-01T20:48:33.352Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:medtronic": {
-      "last_scraped": "2026-06-30T20:57:58.807Z",
+      "last_scraped": "2026-07-01T20:48:33.405Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:deloitte": {
-      "last_scraped": "2026-06-30T20:57:58.849Z",
+      "last_scraped": "2026-07-01T20:48:33.467Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:accenture": {
-      "last_scraped": "2026-06-30T20:57:58.892Z",
+      "last_scraped": "2026-07-01T20:48:33.520Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:capgemini": {
-      "last_scraped": "2026-06-30T20:57:58.929Z",
+      "last_scraped": "2026-07-01T20:48:33.579Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:thoughtworks": {
-      "last_scraped": "2026-06-30T20:57:59.132Z",
-      "last_count": 3,
+      "last_scraped": "2026-07-01T20:48:33.800Z",
+      "last_count": 4,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:tcs": {
-      "last_scraped": "2026-06-30T20:57:59.912Z",
+      "last_scraped": "2026-07-01T20:48:34.589Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:infosys": {
-      "last_scraped": "2026-06-30T20:57:59.956Z",
+      "last_scraped": "2026-07-01T20:48:34.648Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:wipro": {
-      "last_scraped": "2026-06-30T20:57:59.994Z",
+      "last_scraped": "2026-07-01T20:48:34.705Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:hcltech": {
-      "last_scraped": "2026-06-30T20:58:00.048Z",
+      "last_scraped": "2026-07-01T20:48:34.760Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:ltimindtree": {
-      "last_scraped": "2026-06-30T20:58:00.089Z",
+      "last_scraped": "2026-07-01T20:48:34.816Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:persistent": {
-      "last_scraped": "2026-06-30T20:58:00.130Z",
+      "last_scraped": "2026-07-01T20:48:34.873Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:epam": {
-      "last_scraped": "2026-06-30T20:58:00.184Z",
+      "last_scraped": "2026-07-01T20:48:34.931Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:servicenow": {
-      "last_scraped": "2026-06-30T20:58:00.224Z",
+      "last_scraped": "2026-07-01T20:48:34.987Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:cloudflare": {
-      "last_scraped": "2026-06-30T20:58:00.445Z",
+      "last_scraped": "2026-07-01T20:48:36.030Z",
       "last_count": 3,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:datadog": {
-      "last_scraped": "2026-06-30T20:58:00.673Z",
+      "last_scraped": "2026-07-01T20:48:36.284Z",
       "last_count": 9,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:qualcomm": {
-      "last_scraped": "2026-06-30T20:58:00.722Z",
+      "last_scraped": "2026-07-01T20:48:36.338Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:intel": {
-      "last_scraped": "2026-06-30T20:58:00.767Z",
+      "last_scraped": "2026-07-01T20:48:36.397Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:samsung": {
-      "last_scraped": "2026-06-30T20:58:00.808Z",
+      "last_scraped": "2026-07-01T20:48:36.453Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:netflix": {
-      "last_scraped": "2026-06-30T20:58:00.849Z",
+      "last_scraped": "2026-07-01T20:48:36.508Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:stripe": {
-      "last_scraped": "2026-06-30T20:58:04.215Z",
-      "last_count": 37,
+      "last_scraped": "2026-07-01T20:48:36.731Z",
+      "last_count": 36,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:anthropic": {
-      "last_scraped": "2026-06-30T20:58:05.810Z",
+      "last_scraped": "2026-07-01T20:48:36.945Z",
       "last_count": 3,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:figma": {
-      "last_scraped": "2026-06-30T20:58:06.025Z",
+      "last_scraped": "2026-07-01T20:48:37.159Z",
       "last_count": 3,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:coinbase": {
-      "last_scraped": "2026-06-30T20:58:06.222Z",
+      "last_scraped": "2026-07-01T20:48:37.372Z",
       "last_count": 7,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:airtable": {
-      "last_scraped": "2026-06-30T20:58:06.426Z",
+      "last_scraped": "2026-07-01T20:48:37.733Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:asana": {
-      "last_scraped": "2026-06-30T20:58:06.625Z",
+      "last_scraped": "2026-07-01T20:48:37.950Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:hubspot": {
-      "last_scraped": "2026-06-30T20:58:06.820Z",
+      "last_scraped": "2026-07-01T20:48:38.160Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:amplitude": {
-      "last_scraped": "2026-06-30T20:58:07.015Z",
+      "last_scraped": "2026-07-01T20:48:38.370Z",
       "last_count": 3,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:intercom": {
-      "last_scraped": "2026-06-30T20:58:07.218Z",
+      "last_scraped": "2026-07-01T20:48:38.579Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:fivetran": {
-      "last_scraped": "2026-06-30T20:58:08.031Z",
-      "last_count": 14,
+      "last_scraped": "2026-07-01T20:48:39.300Z",
+      "last_count": 13,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:twilio": {
-      "last_scraped": "2026-06-30T20:58:08.231Z",
-      "last_count": 22,
+      "last_scraped": "2026-07-01T20:48:39.513Z",
+      "last_count": 21,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:mixpanel": {
-      "last_scraped": "2026-06-30T20:58:08.656Z",
+      "last_scraped": "2026-07-01T20:48:39.720Z",
       "last_count": 1,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:braze": {
-      "last_scraped": "2026-06-30T20:58:09.502Z",
+      "last_scraped": "2026-07-01T20:48:39.932Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:klaviyo": {
-      "last_scraped": "2026-06-30T20:58:10.251Z",
+      "last_scraped": "2026-07-01T20:48:40.141Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:gong": {
-      "last_scraped": "2026-06-30T20:58:10.296Z",
+      "last_scraped": "2026-07-01T20:48:40.196Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:zendesk": {
-      "last_scraped": "2026-06-30T20:58:10.335Z",
+      "last_scraped": "2026-07-01T20:48:40.256Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:okta": {
-      "last_scraped": "2026-06-30T20:58:12.082Z",
-      "last_count": 103,
+      "last_scraped": "2026-07-01T20:48:40.477Z",
+      "last_count": 109,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:rippling": {
-      "last_scraped": "2026-06-30T20:58:12.129Z",
+      "last_scraped": "2026-07-01T20:48:40.532Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:snowflake": {
-      "last_scraped": "2026-06-30T20:58:12.170Z",
+      "last_scraped": "2026-07-01T20:48:40.586Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:databricks": {
-      "last_scraped": "2026-06-30T20:58:12.389Z",
-      "last_count": 72,
+      "last_scraped": "2026-07-01T20:48:44.614Z",
+      "last_count": 77,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:mongodb": {
-      "last_scraped": "2026-06-30T20:58:12.615Z",
-      "last_count": 50,
+      "last_scraped": "2026-07-01T20:48:44.852Z",
+      "last_count": 51,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:confluent": {
-      "last_scraped": "2026-06-30T20:58:12.657Z",
+      "last_scraped": "2026-07-01T20:48:44.908Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:crowdstrike": {
-      "last_scraped": "2026-06-30T20:58:12.697Z",
+      "last_scraped": "2026-07-01T20:48:45.042Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:paloaltonetworks": {
-      "last_scraped": "2026-06-30T20:58:12.777Z",
+      "last_scraped": "2026-07-01T20:48:45.098Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:newrelic": {
-      "last_scraped": "2026-06-30T20:58:12.976Z",
-      "last_count": 14,
+      "last_scraped": "2026-07-01T20:48:45.312Z",
+      "last_count": 15,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:supabase": {
-      "last_scraped": "2026-06-30T20:58:13.024Z",
+      "last_scraped": "2026-07-01T20:48:45.368Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:dbtlabs": {
-      "last_scraped": "2026-06-30T20:58:13.107Z",
+      "last_scraped": "2026-07-01T20:48:45.428Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:reddit": {
-      "last_scraped": "2026-06-30T20:58:13.309Z",
+      "last_scraped": "2026-07-01T20:48:45.658Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:pinterest": {
-      "last_scraped": "2026-06-30T20:58:14.137Z",
+      "last_scraped": "2026-07-01T20:48:45.903Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:airbnb": {
-      "last_scraped": "2026-06-30T20:58:16.228Z",
-      "last_count": 14,
+      "last_scraped": "2026-07-01T20:48:47.059Z",
+      "last_count": 13,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:doordash": {
-      "last_scraped": "2026-06-30T20:58:16.274Z",
+      "last_scraped": "2026-07-01T20:48:47.119Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:discord": {
-      "last_scraped": "2026-06-30T20:58:16.660Z",
+      "last_scraped": "2026-07-01T20:48:47.336Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:duolingo": {
-      "last_scraped": "2026-06-30T20:58:16.864Z",
+      "last_scraped": "2026-07-01T20:48:47.547Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "greenhouse:coursera": {
-      "last_scraped": "2026-06-30T20:58:17.058Z",
+      "last_scraped": "2026-07-01T20:48:47.756Z",
       "last_count": 6,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:meesho": {
-      "last_scraped": "2026-06-30T20:58:17.474Z",
+      "last_scraped": "2026-07-01T20:48:48.363Z",
       "last_count": 43,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:cred": {
-      "last_scraped": "2026-06-30T20:58:17.700Z",
+      "last_scraped": "2026-07-01T20:48:48.559Z",
       "last_count": 5,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:paytm": {
-      "last_scraped": "2026-06-30T20:58:18.110Z",
-      "last_count": 229,
+      "last_scraped": "2026-07-01T20:48:48.987Z",
+      "last_count": 233,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:browserstack": {
-      "last_scraped": "2026-06-30T20:58:18.151Z",
+      "last_scraped": "2026-07-01T20:48:49.030Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:chargebee": {
-      "last_scraped": "2026-06-30T20:58:18.177Z",
+      "last_scraped": "2026-07-01T20:48:49.073Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:clevertap": {
-      "last_scraped": "2026-06-30T20:58:18.208Z",
+      "last_scraped": "2026-07-01T20:48:49.114Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:postman": {
-      "last_scraped": "2026-06-30T20:58:18.236Z",
+      "last_scraped": "2026-07-01T20:48:49.155Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:unacademy": {
-      "last_scraped": "2026-06-30T20:58:18.263Z",
+      "last_scraped": "2026-07-01T20:48:49.196Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:scaler": {
-      "last_scraped": "2026-06-30T20:58:18.289Z",
+      "last_scraped": "2026-07-01T20:48:49.290Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:rapido": {
-      "last_scraped": "2026-06-30T20:58:18.317Z",
+      "last_scraped": "2026-07-01T20:48:49.332Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:mamaearth": {
-      "last_scraped": "2026-06-30T20:58:18.344Z",
+      "last_scraped": "2026-07-01T20:48:49.395Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:pristyncare": {
-      "last_scraped": "2026-06-30T20:58:18.370Z",
+      "last_scraped": "2026-07-01T20:48:49.437Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:springworks": {
-      "last_scraped": "2026-06-30T20:58:18.396Z",
+      "last_scraped": "2026-07-01T20:48:49.478Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:khatabook": {
-      "last_scraped": "2026-06-30T20:58:18.422Z",
+      "last_scraped": "2026-07-01T20:48:49.519Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:apna": {
-      "last_scraped": "2026-06-30T20:58:18.450Z",
+      "last_scraped": "2026-07-01T20:48:49.559Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:udaan": {
-      "last_scraped": "2026-06-30T20:58:18.476Z",
+      "last_scraped": "2026-07-01T20:48:49.601Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:rebelfoods": {
-      "last_scraped": "2026-06-30T20:58:18.503Z",
+      "last_scraped": "2026-07-01T20:48:49.642Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:canva": {
-      "last_scraped": "2026-06-30T20:58:18.529Z",
+      "last_scraped": "2026-07-01T20:48:49.684Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:gitlab": {
-      "last_scraped": "2026-06-30T20:58:18.556Z",
+      "last_scraped": "2026-07-01T20:48:51.754Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:shopify": {
-      "last_scraped": "2026-06-30T20:58:18.624Z",
+      "last_scraped": "2026-07-01T20:48:51.796Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:typeform": {
-      "last_scraped": "2026-06-30T20:58:18.650Z",
+      "last_scraped": "2026-07-01T20:48:51.838Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:hotjar": {
-      "last_scraped": "2026-06-30T20:58:18.676Z",
+      "last_scraped": "2026-07-01T20:48:51.889Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:veeva": {
-      "last_scraped": "2026-06-30T20:58:19.207Z",
-      "last_count": 29,
+      "last_scraped": "2026-07-01T20:48:56.778Z",
+      "last_count": 28,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:procore": {
-      "last_scraped": "2026-06-30T20:58:19.235Z",
+      "last_scraped": "2026-07-01T20:48:56.867Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:substack": {
-      "last_scraped": "2026-06-30T20:58:19.268Z",
+      "last_scraped": "2026-07-01T20:48:56.909Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "lever:quizlet": {
-      "last_scraped": "2026-06-30T20:58:19.319Z",
+      "last_scraped": "2026-07-01T20:48:56.962Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:razorpay": {
-      "last_scraped": "2026-06-30T20:58:19.369Z",
+      "last_scraped": "2026-07-01T20:48:57.161Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:setu": {
-      "last_scraped": "2026-06-30T20:58:19.379Z",
+      "last_scraped": "2026-07-01T20:48:57.257Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:jupiter": {
-      "last_scraped": "2026-06-30T20:58:19.470Z",
+      "last_scraped": "2026-07-01T20:48:57.345Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:fi": {
-      "last_scraped": "2026-06-30T20:58:19.586Z",
+      "last_scraped": "2026-07-01T20:48:57.460Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:navi": {
-      "last_scraped": "2026-06-30T20:58:20.053Z",
+      "last_scraped": "2026-07-01T20:48:57.702Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:bharatpe": {
-      "last_scraped": "2026-06-30T20:58:20.156Z",
+      "last_scraped": "2026-07-01T20:48:57.799Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:linear": {
-      "last_scraped": "2026-06-30T20:58:20.325Z",
+      "last_scraped": "2026-07-01T20:48:58.052Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:notion": {
-      "last_scraped": "2026-06-30T20:58:20.530Z",
+      "last_scraped": "2026-07-01T20:48:58.346Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:vercel": {
-      "last_scraped": "2026-06-30T20:58:20.691Z",
+      "last_scraped": "2026-07-01T20:48:58.615Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:ramp": {
-      "last_scraped": "2026-06-30T20:58:20.884Z",
+      "last_scraped": "2026-07-01T20:48:58.832Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:loom": {
-      "last_scraped": "2026-06-30T20:58:21.048Z",
+      "last_scraped": "2026-07-01T20:48:59.077Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:retool": {
-      "last_scraped": "2026-06-30T20:58:21.059Z",
+      "last_scraped": "2026-07-01T20:48:59.171Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:elevenlabs": {
-      "last_scraped": "2026-06-30T20:58:21.256Z",
+      "last_scraped": "2026-07-01T20:48:59.525Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:mistral": {
-      "last_scraped": "2026-06-30T20:58:21.369Z",
+      "last_scraped": "2026-07-01T20:48:59.614Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:perplexity": {
-      "last_scraped": "2026-06-30T20:58:21.545Z",
+      "last_scraped": "2026-07-01T20:48:59.888Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:neon": {
-      "last_scraped": "2026-06-30T20:58:21.799Z",
+      "last_scraped": "2026-07-01T20:49:00.142Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:raycast": {
-      "last_scraped": "2026-06-30T20:58:22.098Z",
+      "last_scraped": "2026-07-01T20:49:00.391Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:resend": {
-      "last_scraped": "2026-06-30T20:58:22.332Z",
+      "last_scraped": "2026-07-01T20:49:00.650Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:jar": {
-      "last_scraped": "2026-06-30T20:58:22.450Z",
+      "last_scraped": "2026-07-01T20:49:00.760Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:campsite": {
-      "last_scraped": "2026-06-30T20:58:22.569Z",
+      "last_scraped": "2026-07-01T20:49:00.869Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:runwayml": {
-      "last_scraped": "2026-06-30T20:58:22.649Z",
+      "last_scraped": "2026-07-01T20:49:00.981Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "ashby:anyscale": {
-      "last_scraped": "2026-06-30T20:58:22.818Z",
+      "last_scraped": "2026-07-01T20:49:01.159Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workable:witatl": {
-      "last_scraped": "2026-06-30T20:58:22.930Z",
+      "last_scraped": "2026-07-01T20:49:01.361Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workable:freshworks": {
-      "last_scraped": "2026-06-30T20:58:23.023Z",
+      "last_scraped": "2026-07-01T20:49:01.462Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workable:zoho": {
-      "last_scraped": "2026-06-30T20:58:23.108Z",
+      "last_scraped": "2026-07-01T20:49:01.569Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workable:exotel": {
-      "last_scraped": "2026-06-30T20:58:23.200Z",
+      "last_scraped": "2026-07-01T20:49:01.676Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workable:haptik": {
-      "last_scraped": "2026-06-30T20:58:23.287Z",
+      "last_scraped": "2026-07-01T20:49:01.790Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "smartrecruiters:Freshworks": {
-      "last_scraped": "2026-06-30T20:58:23.725Z",
+      "last_scraped": "2026-07-01T20:49:02.309Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "smartrecruiters:Visa": {
-      "last_scraped": "2026-06-30T20:58:24.111Z",
+      "last_scraped": "2026-07-01T20:49:02.724Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "smartrecruiters:Booking": {
-      "last_scraped": "2026-06-30T20:58:24.497Z",
+      "last_scraped": "2026-07-01T20:49:03.134Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "smartrecruiters:Zalando": {
-      "last_scraped": "2026-06-30T20:58:24.899Z",
+      "last_scraped": "2026-07-01T20:49:03.550Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "eightfold:aexp.eightfold.ai": {
-      "last_scraped": "2026-06-30T20:58:25.444Z",
+      "last_scraped": "2026-07-01T20:49:04.389Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "eightfold:mastercard.eightfold.ai": {
-      "last_scraped": "2026-06-30T20:58:28.478Z",
+      "last_scraped": "2026-07-01T20:49:07.490Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "eightfold:wellsfargo.eightfold.ai": {
-      "last_scraped": "2026-06-30T20:58:28.725Z",
+      "last_scraped": "2026-07-01T20:49:07.764Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workday:Target India": {
-      "last_scraped": "2026-06-30T20:58:32.832Z",
+      "last_scraped": "2026-07-01T20:49:12.232Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workday:Walmart": {
-      "last_scraped": "2026-06-30T20:59:09.625Z",
+      "last_scraped": "2026-07-01T20:49:51.121Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workday:SAP": {
-      "last_scraped": "2026-06-30T20:59:15.636Z",
+      "last_scraped": "2026-07-01T20:49:56.849Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workday:Workday": {
-      "last_scraped": "2026-06-30T20:59:58.907Z",
+      "last_scraped": "2026-07-01T20:50:44.399Z",
       "last_count": 0,
       "status": "error",
       "error": "Invalid time value",
-      "consecutive_errors": 100
+      "consecutive_errors": 101
     },
     "workday:KPMG India": {
-      "last_scraped": "2026-06-30T21:00:02.627Z",
+      "last_scraped": "2026-07-01T20:50:48.778Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workday:Texas Instruments": {
-      "last_scraped": "2026-06-30T21:00:06.559Z",
+      "last_scraped": "2026-07-01T20:50:52.605Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workday:Micron": {
-      "last_scraped": "2026-06-30T21:00:11.192Z",
+      "last_scraped": "2026-07-01T20:50:57.489Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workday:Lowe's India": {
-      "last_scraped": "2026-06-30T21:00:15.224Z",
+      "last_scraped": "2026-07-01T20:51:01.783Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "workday:Applied Materials": {
-      "last_scraped": "2026-06-30T21:00:36.775Z",
+      "last_scraped": "2026-07-01T20:51:25.704Z",
       "last_count": 0,
       "status": "error",
       "error": "Invalid time value",
-      "consecutive_errors": 100
+      "consecutive_errors": 101
     },
     "adzuna_mnc:JPMorgan Chase": {
-      "last_scraped": "2026-06-30T21:00:37.078Z",
+      "last_scraped": "2026-07-01T20:51:25.971Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Goldman Sachs": {
-      "last_scraped": "2026-06-30T21:00:37.174Z",
+      "last_scraped": "2026-07-01T20:51:26.053Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Morgan Stanley": {
-      "last_scraped": "2026-06-30T21:00:37.291Z",
+      "last_scraped": "2026-07-01T20:51:26.110Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Microsoft": {
-      "last_scraped": "2026-06-30T21:00:37.395Z",
+      "last_scraped": "2026-07-01T20:51:26.171Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Google": {
-      "last_scraped": "2026-06-30T21:00:37.516Z",
+      "last_scraped": "2026-07-01T20:51:26.231Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Amazon": {
-      "last_scraped": "2026-06-30T21:00:37.625Z",
+      "last_scraped": "2026-07-01T20:51:26.287Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Deutsche Bank": {
-      "last_scraped": "2026-06-30T21:00:37.831Z",
+      "last_scraped": "2026-07-01T20:51:26.348Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Barclays": {
-      "last_scraped": "2026-06-30T21:00:37.934Z",
+      "last_scraped": "2026-07-01T20:51:26.414Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:HSBC": {
-      "last_scraped": "2026-06-30T21:00:38.044Z",
+      "last_scraped": "2026-07-01T20:51:26.477Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Citi": {
-      "last_scraped": "2026-06-30T21:00:38.160Z",
+      "last_scraped": "2026-07-01T20:51:26.550Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:BNY Mellon": {
-      "last_scraped": "2026-06-30T21:00:38.266Z",
+      "last_scraped": "2026-07-01T20:51:26.607Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Fidelity": {
-      "last_scraped": "2026-06-30T21:00:38.377Z",
+      "last_scraped": "2026-07-01T20:51:26.674Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:S&P Global": {
-      "last_scraped": "2026-06-30T21:00:38.480Z",
+      "last_scraped": "2026-07-01T20:51:26.735Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Northern Trust": {
-      "last_scraped": "2026-06-30T21:00:38.581Z",
+      "last_scraped": "2026-07-01T20:51:26.809Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:State Street": {
-      "last_scraped": "2026-06-30T21:00:38.686Z",
+      "last_scraped": "2026-07-01T20:51:26.868Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Oracle India": {
-      "last_scraped": "2026-06-30T21:00:38.795Z",
+      "last_scraped": "2026-07-01T20:51:26.925Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:SAP": {
-      "last_scraped": "2026-06-30T21:00:43.825Z",
+      "last_scraped": "2026-07-01T20:51:28.275Z",
       "last_count": 50,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Workday": {
-      "last_scraped": "2026-06-30T21:00:43.946Z",
+      "last_scraped": "2026-07-01T20:51:28.340Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:McKinsey": {
-      "last_scraped": "2026-06-30T21:00:44.054Z",
+      "last_scraped": "2026-07-01T20:51:28.410Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:BCG": {
-      "last_scraped": "2026-06-30T21:00:44.176Z",
+      "last_scraped": "2026-07-01T20:51:28.470Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Flipkart": {
-      "last_scraped": "2026-06-30T21:00:44.347Z",
+      "last_scraped": "2026-07-01T20:51:28.545Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Walmart": {
-      "last_scraped": "2026-06-30T21:00:44.513Z",
+      "last_scraped": "2026-07-01T20:51:28.611Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Samsung India": {
-      "last_scraped": "2026-06-30T21:00:44.633Z",
+      "last_scraped": "2026-07-01T20:51:28.666Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Ola Cabs": {
-      "last_scraped": "2026-06-30T21:00:44.730Z",
+      "last_scraped": "2026-07-01T20:51:28.734Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:MakeMyTrip": {
-      "last_scraped": "2026-06-30T21:00:44.807Z",
+      "last_scraped": "2026-07-01T20:51:28.795Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_mnc:Byjus": {
-      "last_scraped": "2026-06-30T21:00:44.904Z",
+      "last_scraped": "2026-07-01T20:51:28.861Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:it-jobs/bangalore": {
-      "last_scraped": "2026-06-30T21:00:57.009Z",
+      "last_scraped": "2026-07-01T20:51:32.259Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:it-jobs/mumbai": {
-      "last_scraped": "2026-06-30T21:01:11.910Z",
+      "last_scraped": "2026-07-01T20:51:35.539Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:it-jobs/delhi": {
-      "last_scraped": "2026-06-30T21:01:23.628Z",
+      "last_scraped": "2026-07-01T20:51:38.389Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:it-jobs/hyderabad": {
-      "last_scraped": "2026-06-30T21:01:34.316Z",
+      "last_scraped": "2026-07-01T20:51:41.592Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:it-jobs/pune": {
-      "last_scraped": "2026-06-30T21:01:46.525Z",
+      "last_scraped": "2026-07-01T20:51:44.952Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:engineering-jobs/bangalore": {
-      "last_scraped": "2026-06-30T21:01:54.521Z",
+      "last_scraped": "2026-07-01T20:51:48.203Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:engineering-jobs/mumbai": {
-      "last_scraped": "2026-06-30T21:02:00.631Z",
+      "last_scraped": "2026-07-01T20:51:51.309Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:engineering-jobs/delhi": {
-      "last_scraped": "2026-06-30T21:02:07.670Z",
+      "last_scraped": "2026-07-01T20:51:54.209Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:engineering-jobs/hyderabad": {
-      "last_scraped": "2026-06-30T21:02:12.691Z",
+      "last_scraped": "2026-07-01T20:51:57.223Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:engineering-jobs/pune": {
-      "last_scraped": "2026-06-30T21:02:16.208Z",
+      "last_scraped": "2026-07-01T20:52:00.379Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:accounting-finance-jobs/bangalore": {
-      "last_scraped": "2026-06-30T21:02:19.862Z",
+      "last_scraped": "2026-07-01T20:52:04.120Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:accounting-finance-jobs/mumbai": {
-      "last_scraped": "2026-06-30T21:02:23.996Z",
+      "last_scraped": "2026-07-01T20:52:06.957Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:accounting-finance-jobs/delhi": {
-      "last_scraped": "2026-06-30T21:02:28.021Z",
+      "last_scraped": "2026-07-01T20:52:09.826Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:sales-jobs/bangalore": {
-      "last_scraped": "2026-06-30T21:02:31.645Z",
+      "last_scraped": "2026-07-01T20:52:12.554Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:sales-jobs/mumbai": {
-      "last_scraped": "2026-06-30T21:02:35.145Z",
+      "last_scraped": "2026-07-01T20:52:15.309Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:marketing-jobs/bangalore": {
-      "last_scraped": "2026-06-30T21:02:35.190Z",
+      "last_scraped": "2026-07-01T20:52:15.436Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:marketing-jobs/mumbai": {
-      "last_scraped": "2026-06-30T21:02:35.223Z",
+      "last_scraped": "2026-07-01T20:52:15.484Z",
       "last_count": 0,
       "status": "empty",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:hr-jobs/bangalore": {
-      "last_scraped": "2026-06-30T21:02:38.615Z",
+      "last_scraped": "2026-07-01T20:52:18.447Z",
       "last_count": 150,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:graduate-jobs/bangalore": {
-      "last_scraped": "2026-06-30T21:02:39.033Z",
-      "last_count": 20,
+      "last_scraped": "2026-07-01T20:52:18.725Z",
+      "last_count": 21,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
     },
     "adzuna_city:graduate-jobs/mumbai": {
-      "last_scraped": "2026-06-30T21:02:39.498Z",
-      "last_count": 14,
+      "last_scraped": "2026-07-01T20:52:18.968Z",
+      "last_count": 15,
       "status": "ok",
       "error": null,
       "consecutive_errors": 0
