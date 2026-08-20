@@ -1,5 +1,5 @@
 /**
- * JobScout India — Crawler v7
+ * JobScout India — Crawler v8
  * ============================
  * Reads company list from config/companies.json — no hardcoded arrays.
  * Writes data/jobs.json, data/meta.json, data/state.json.
@@ -10,7 +10,29 @@
  *   node crawler.js --new-only   → Only scrape companies not yet in state.json
  *
  * Sources supported:
- *   greenhouse | lever | ashby | workable | smartrecruiters | eightfold | workday | adzuna_mnc | adzuna_city
+ *   greenhouse | lever | ashby | workable | smartrecruiters | eightfold | workday
+ *   | adzuna_mnc | adzuna_city | adzuna_keyword | jsearch
+ *
+ * v8 changes (audit findings, see onestop-jobs design doc §6 for the full
+ * writeup):
+ *   - Fixed version drift: header/User-Agent said v7 in most places but
+ *     fetchGoogleSheet's User-Agent said "JobScout/8.0" — now consistent.
+ *   - Removed dead `byMethod` stats variable (computed, never read/written).
+ *   - Added a consecutive-error warning so a permanently broken company
+ *     (bad slug, dead ATS board) shows up loudly in run logs instead of
+ *     silently failing forever — recordState() already tracked the counter,
+ *     nothing consumed it.
+ *   - New: adzuna_keyword source — keyword-based Adzuna search (e.g. "data
+ *     analyst", "business analyst") per city, since Adzuna has no dedicated
+ *     analytics category tag, only broad buckets (it-jobs, engineering-jobs
+ *     etc). This is the fastest way to get more analytics-role coverage —
+ *     zero new signup, reuses the Adzuna credentials already in place.
+ *   - New: jsearch source (optional, off unless JSEARCH_KEY is set) — wraps
+ *     Google for Jobs via OpenWeb Ninja's JSearch API, which aggregates
+ *     LinkedIn/Indeed/Glassdoor/etc. There is no official Google Jobs API;
+ *     this is the verified third-party path. Free tier is 200 requests/
+ *     month, so this runs on a weekly cadence, not the daily 23h TTL the
+ *     rest of the pipeline uses — see JSEARCH_TTL_MS.
  *
  * India Classification (5 layers):
  *   L1 — Explicit India city/state in location → KEEP
@@ -42,6 +64,14 @@ const META_F       = path.join(ROOT, 'data',   'meta.json');
 
 // How long before we re-scrape a company (23h — gives buffer for daily 6am IST run)
 const SCRAPE_TTL_MS = 23 * 60 * 60 * 1000;
+// jsearch runs weekly, not daily — its free tier is 200 requests/month,
+// which a daily 23h TTL would blow through in under two weeks at even a
+// handful of queries. See fetchJSearch below.
+const JSEARCH_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+// A company failing this many runs in a row almost always means a dead
+// slug or a moved ATS board, not a transient network blip — surface it
+// loudly instead of retrying forever with no one noticing.
+const CONSECUTIVE_ERROR_WARN_THRESHOLD = 5;
 
 // ── LOAD CONFIG ───────────────────────────────────────────────────────────────
 const CONFIG = JSON.parse(fs.readFileSync(COMPANIES_F, 'utf8'));
@@ -65,26 +95,30 @@ function stateKey(method, slug) {
   return `${method}:${slug}`;
 }
 
-function shouldScrape(state, method, slug) {
+function shouldScrape(state, method, slug, ttlMs = SCRAPE_TTL_MS) {
   if (FORCE) return true;
   const key = stateKey(method, slug);
   const entry = state.companies[key];
   if (!entry) return true;                                   // Never scraped
   if (NEW_ONLY) return false;                               // --new-only: skip already-known companies
   const age = Date.now() - new Date(entry.last_scraped).getTime();
-  return age > SCRAPE_TTL_MS;                               // Re-scrape if stale
+  return age > ttlMs;                                       // Re-scrape if stale
 }
 
 function recordState(state, method, slug, count, error = null) {
   const key = stateKey(method, slug);
   const prev = state.companies[key] || {};
+  const consecutive_errors = error ? (prev.consecutive_errors || 0) + 1 : 0;
   state.companies[key] = {
     last_scraped: new Date().toISOString(),
     last_count: count,
     status: error ? 'error' : count === 0 ? 'empty' : 'ok',
     error: error || null,
-    consecutive_errors: error ? (prev.consecutive_errors || 0) + 1 : 0,
+    consecutive_errors,
   };
+  if (consecutive_errors === CONSECUTIVE_ERROR_WARN_THRESHOLD) {
+    console.log(`  🚨 ${key} has failed ${consecutive_errors} runs in a row — likely a dead slug or moved ATS board. Check companies.json.`);
+  }
 }
 
 // ── INDIA CLASSIFICATION ──────────────────────────────────────────────────────
@@ -185,7 +219,7 @@ async function fetchJSON(url, options = {}, retries = 3) {
     try {
       const r = await fetch(url, {
         headers: {
-          'User-Agent': 'JobScout/7.0 (github.com/Gketan97/jobscout-date)',
+          'User-Agent': 'JobScout/8.0 (github.com/Gketan97/jobscout-date)',
           ...options.headers,
         },
         signal: AbortSignal.timeout(15000),
@@ -218,7 +252,7 @@ async function postJSON(url, body, retries = 3) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'User-Agent': 'JobScout/7.0',
+          'User-Agent': 'JobScout/8.0',
           'Accept': 'application/json',
         },
         body: JSON.stringify(body),
@@ -632,6 +666,100 @@ async function fetchAdzunaCity(query) {
   return jobs;
 }
 
+/**
+ * Adzuna keyword search — targets specific role titles (e.g. "data analyst")
+ * that don't map to any single Adzuna category tag. Adzuna's categories are
+ * broad buckets (it-jobs, engineering-jobs, accounting-finance-jobs, etc.) —
+ * there's no "data" or "analytics" category, so the only way to target
+ * analytics roles specifically is a keyword search via the `what` param.
+ * Uses the same ADZUNA_ID/ADZUNA_KEY already configured — no new signup.
+ */
+async function fetchAdzunaKeyword(query) {
+  const { what, where } = query;
+  const jobs = [];
+  const seen = new Set();
+  for (let page = 1; page <= 2; page++) {
+    const url = `https://api.adzuna.com/v1/api/jobs/in/search/${page}?app_id=${ADZUNA_ID}&app_key=${ADZUNA_KEY}&results_per_page=50&what=${encodeURIComponent(what)}&where=${encodeURIComponent(where)}&content-type=application/json`;
+    const d = await fetchJSON(url);
+    if (!d?.results?.length) break;
+    for (const j of d.results) {
+      const id = `az-kw-${j.id || hashStr(j.title + (j.company?.display_name || ''))}`;
+      if (seen.has(id)) continue;
+      seen.add(id);
+      jobs.push(makeJob({
+        id,
+        title:     j.title || '',
+        company:   j.company?.display_name || '',
+        location:  j.location?.display_name || where,
+        dept:      j.category?.label || '',
+        fn:        'data', // these queries are analytics-keyword-targeted by construction
+        url:       j.redirect_url || '',
+        color:     '#0D9488',
+        tier:      2,
+        posted_at: j.created ? j.created.slice(0, 10) : '',
+        src:       'adzuna',
+      }));
+    }
+    const total = d.count || 0;
+    if (page * 50 >= total) break;
+    await sleep(300);
+  }
+  return jobs;
+}
+
+/**
+ * JSearch (via OpenWeb Ninja) — wraps Google for Jobs, which itself
+ * aggregates LinkedIn/Indeed/Glassdoor/ZipRecruiter/etc. There is no
+ * official public Google Jobs API — Google Cloud Talent Solution is a
+ * different product (for publishing YOUR OWN jobs into ML-powered search,
+ * not for querying others' listings). JSearch is the verified path.
+ *
+ * Fully optional: skips cleanly if JSEARCH_KEY isn't set, same pattern as
+ * Adzuna. Free tier is 200 requests/month / 1000/hour — see JSEARCH_TTL_MS
+ * (weekly cadence) for why this isn't run on the daily 23h cycle. At ~15
+ * queries/run (5 cities × 3 analytics titles) weekly, that's ~65/month,
+ * comfortably inside the free tier. Bumping to daily would need the $25/mo
+ * Pro tier (10k requests/month) — verify current pricing before assuming
+ * this number still holds, vendor pricing pages change.
+ */
+async function fetchJSearch(query) {
+  if (!JSEARCH_KEY) return [];
+  const jobs = [];
+  try {
+    const url = `https://api.openwebninja.com/jsearch/search-v2?query=${encodeURIComponent(query)}&country=in`;
+    const r = await fetch(url, {
+      headers: { 'x-api-key': JSEARCH_KEY },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!r.ok) {
+      console.log(`  ⚠️  JSearch HTTP ${r.status} for "${query}"`);
+      return [];
+    }
+    const d = await r.json();
+    for (const j of (d.data || [])) {
+      // job_apply_link is the direct-to-source URL JSearch resolved —
+      // real, not fabricated, same "no AI-generated dead links" standard
+      // the rest of the pipeline holds to (see design doc §2 claims audit).
+      if (!j.job_apply_link) continue;
+      jobs.push(makeJob({
+        id:        `js-${hashStr(j.job_id || (j.employer_name + j.job_title))}`,
+        title:     j.job_title || '',
+        company:   j.employer_name || '',
+        location:  j.job_city ? `${j.job_city}, India` : 'India',
+        fn:        'data',
+        url:       j.job_apply_link,
+        color:     '#0D9488',
+        tier:      3,
+        posted_at: j.job_posted_at_datetime_utc ? j.job_posted_at_datetime_utc.slice(0, 10) : '',
+        src:       'jsearch',
+      }));
+    }
+  } catch (e) {
+    console.log(`  ✗  JSearch error for "${query}": ${e.message}`);
+  }
+  return jobs;
+}
+
 // ── DISPATCH ──────────────────────────────────────────────────────────────────
 async function scrapeCompany(method, co, state) {
   const slug = co.s || co.host || co.q || co.n;
@@ -788,6 +916,19 @@ async function main() {
     }
   }
 
+  // Adzuna and JSearch are intentionally disabled — decision 2026-08-20.
+  // Reasons: Adzuna's redirect_url routes through an ad-serving redirect
+  // page before reaching the actual listing, which conflicts with the
+  // "pulled directly from company career pages" trust claim in the
+  // platform hero (see onestop-jobs design doc §2 claims audit). JSearch
+  // isn't free at meaningful query volume (200 req/month free tier).
+  // Code below is commented out, not deleted — both are fully working and
+  // can be re-enabled by uncommenting when/if the tradeoffs change. See
+  // design doc §6 pipeline architecture section for the full writeup.
+  console.log('\n⏸  Adzuna sourcing disabled (commented out in crawler.js — ad-redirect links, see design doc §6)');
+  console.log('⏸  JSearch sourcing disabled (commented out in crawler.js — not free at volume, see design doc §6)');
+
+  /*
   // Adzuna (only if keys present)
   if (ADZUNA_ID) {
     const mncList = (CONFIG.adzuna_mnc || []).filter(co => (co.status || 'active') === 'active');
@@ -819,9 +960,63 @@ async function main() {
         }
       }
     }
+
+    // Analytics-role keyword search — see fetchAdzunaKeyword doc comment.
+    const keywordList = (CONFIG.adzuna_keyword || []).filter(co => (co.status || 'active') === 'active');
+    if (keywordList.length) {
+      console.log(`\n── ADZUNA KEYWORD — analytics roles (${keywordList.length} queries) ──`);
+      for (const q of keywordList) {
+        const key = `${q.what}/${q.where}`;
+        if (!shouldScrape(state, 'adzuna_keyword', key)) {
+          console.log(`  ⏭  ${key} — skipped`);
+          continue;
+        }
+        try {
+          const jobs = await fetchAdzunaKeyword(q);
+          console.log(`  ✓  ${key} — ${jobs.length} jobs`);
+          recordState(state, 'adzuna_keyword', key, jobs.length);
+          freshJobs.push(...jobs);
+        } catch (e) {
+          console.log(`  ✗  ${key} — ${e.message}`);
+          recordState(state, 'adzuna_keyword', key, 0, e.message);
+        }
+      }
+    }
   } else {
     console.log('\n⚠️  Skipping Adzuna — ADZUNA_APP_ID not set');
   }
+
+  // JSearch (Google for Jobs, via OpenWeb Ninja) — optional, weekly cadence.
+  // See fetchJSearch doc comment for why this isn't on the daily cycle.
+  if (JSEARCH_KEY) {
+    const jsearchQueries = (CONFIG.jsearch_analytics || []).filter(q => (q.status || 'active') === 'active');
+    if (jsearchQueries.length) {
+      console.log(`\n── JSEARCH — analytics roles, weekly (${jsearchQueries.length} queries) ──`);
+      for (const q of jsearchQueries) {
+        const key = q.query;
+        if (!shouldScrape(state, 'jsearch', key, JSEARCH_TTL_MS)) {
+          console.log(`  ⏭  ${key} — skipped (within weekly window)`);
+          continue;
+        }
+        try {
+          const jobs = await fetchJSearch(q.query);
+          console.log(`  ✓  ${key} — ${jobs.length} jobs`);
+          recordState(state, 'jsearch', key, jobs.length);
+          freshJobs.push(...jobs);
+        } catch (e) {
+          console.log(`  ✗  ${key} — ${e.message}`);
+          recordState(state, 'jsearch', key, 0, e.message);
+        }
+        await sleep(500);
+      }
+    }
+  } else {
+    console.log('\n⚠️  Skipping JSearch — JSEARCH_KEY not set (optional, see fetchJSearch doc comment)');
+  }
+  */
+
+
+
   // Google Sheet manual jobs
   console.log('\n── GOOGLE SHEET ──');
   const sheetJobs = await fetchGoogleSheet();
@@ -851,11 +1046,9 @@ async function main() {
   // Stats
   const sources  = {};
   const cities   = {};
-  const byMethod = {};
   for (const j of fresh) {
     sources[j.src]  = (sources[j.src]  || 0) + 1;
     cities[j.city]  = (cities[j.city]  || 0) + 1;
-    byMethod[j.src] = (byMethod[j.src] || 0) + 1;
   }
 
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
@@ -872,14 +1065,14 @@ async function main() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
   fs.writeFileSync(JOBS_F, JSON.stringify({
-    v: 7,
+    v: 8,
     count: fresh.length,
     updated_at: new Date().toISOString(),
     jobs: fresh,
   }));
 
   fs.writeFileSync(META_F, JSON.stringify({
-    v: 7,
+    v: 8,
     count: fresh.length,
     updated_at: new Date().toISOString(),
     sources,
