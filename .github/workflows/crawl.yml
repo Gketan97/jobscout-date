@@ -1,4 +1,6 @@
 name: JobScout Crawler
+permissions:
+  contents: write
 on:
   # Daily full run — 12:30 AM IST = 7:00 PM UTC (previous day)
   schedule:
@@ -55,7 +57,6 @@ jobs:
       - name: Run crawler (${{ steps.mode.outputs.label }})
         run: node crawler.js ${{ steps.mode.outputs.args }}
         env:
-          env:
           ADZUNA_APP_ID:  ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           JSEARCH_KEY:    ${{ secrets.JSEARCH_KEY }}
